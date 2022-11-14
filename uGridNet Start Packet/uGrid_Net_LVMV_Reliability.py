@@ -720,8 +720,8 @@ if __name__ == "__main__":
     repeats_MV_clusters = 10
     repeats_LV_clusters = 10
     
-    repeats_LV_poles = 1
-    repeats_MV_poles = 1
+    repeats_LV_poles = 2
+    repeats_MV_poles = 2
     
     repeats_improved_solution = 3
     total_repeats_lookback = repeats_improved_solution*repeats_MV_poles*repeats_LV_poles

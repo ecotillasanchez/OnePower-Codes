@@ -4,7 +4,7 @@
 Each python file can be run seperately in an independent mode where the interconnecting variables are pre-set. To run the optimization
 the Macro file is run.
 
-Marco: macro_PC_3_alt.py: updated accept new technical tools code
+Macro: macro_PC_3_alt.py: updated accept new technical tools code
 
 Technical Tools: technical_tools_PC_3_alt.py: updated in 2019 to implement new dispatch algorithm
 

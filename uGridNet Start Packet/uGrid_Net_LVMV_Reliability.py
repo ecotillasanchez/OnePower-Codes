@@ -137,7 +137,7 @@ def Clustering(indexes_conn,num_clusters):
     from sklearn import mixture
     
     X = np.copy(indexes_conn)
-
+    num_clusters = int(num_clusters)
     cv_type = 'tied'
     gmm = mixture.GaussianMixture(n_components = num_clusters,covariance_type=cv_type)
     gmm.fit(X)

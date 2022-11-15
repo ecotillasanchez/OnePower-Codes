@@ -25,6 +25,7 @@ import pandas as pd
 from technical_tools_PC_3_alt import Tech_total
 from economic_tools_PC_3 import Econ_total
 import time
+import matplotlib as plt
 
 
 if __name__ == "__main__":
@@ -245,13 +246,16 @@ if __name__ == "__main__":
     writer.save()
 
     #Plot power to the load and the load curve
-    #gB_plot_variables.plot(y = ['LoadkW', 'genLoad', 'Batt_Power_to_Load', 'PV_Power','dumpload'], kind='line')
-    #filename_Plot_LoadDispatch = "Power_to_Load_"+PSO_Parameters['output_name'][0]+".pdf"
-    #plt.savefig(filename_Plot_LoadDispatch)
-    #Plot power to battery and battery SOC
-    #gB_plot_variables.plot(y = ['Batt_SOC', 'Charge', 'PV_Batt_Change_Power','Batt_Power_to_Load_neg', 'Batt_frac', 'Gen_Batt_Charge_Power'], kind='line')
-    #filename_Plot_BatteryDispatch = "Battery_to_Load_"+PSO_Parameters['output_name'][0]+".pdf"
-    #plt.savefig(filename_Plot_BatteryDispatch)
+    gB_plot_variables.plot(y = ['Batt_SOC', 'LoadkW', 'P_gen', 'P_PV', 'P_batt', 'P_dump'], kind='line')
+    plt.pyplot.xlim(0,72)
+    filename_Plot_LoadDispatch = "AA_PowerFlow_"+PSO_Parameters['output_name'][0]+".pdf"
+    plt.pyplot.savefig(filename_Plot_LoadDispatch)
+
+    gB_plot_variables.plot(y = ['Batt_SOC', 'LoadkW', 'P_gen', 'P_PV', 'P_batt', 'P_dump'], kind='line')
+    filename_Plot_LoadDispatch2 = "AA_PowerFlow2_"+PSO_Parameters['output_name'][0]+".pdf"
+    plt.pyplot.xlim(0,240)
+    plt.pyplot.savefig(filename_Plot_LoadDispatch2)
+    print('Saved load/generation graphs to current directory as AA_PowerFlow_...pdf')
 
 
     
